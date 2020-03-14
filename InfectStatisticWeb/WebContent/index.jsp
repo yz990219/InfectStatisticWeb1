@@ -114,18 +114,18 @@
 			</div>
 		</div>
 
-		<div id="cure">
-			<div class="text2 ">
-				<p>
-					<span>累计治愈</span>
-				</p>
-			</div>
-		</div>
-
 		<div id="dead">
 			<div class="text2 ">
 				<p>
 					<span>累计死亡</span>
+				</p>
+			</div>
+		</div>
+
+		<div id="cure">
+			<div class="text2 ">
+				<p>
+					<span>累计治愈</span>
 				</p>
 			</div>
 		</div>
@@ -139,19 +139,19 @@
 			</div>
 		</div>
 
-		<div id="cures">
+		<div id="deads">
 			<div class="text2 ">
 				<p style="font-size: 72px;">
-					<span style="color: #7F7F7F;"><%=cmd_run.get_province("全国").cure %></span>
+					<span style="color: #7F7F7F;"><%=cmd_run.get_province("全国").dead %></span>
 				</p>
 
 			</div>
 		</div>
 
-		<div id="deads">
+		<div id="cures">
 			<div class="text2 ">
 				<p style="font-size: 72px;">
-					<span style="color: #D9001B;"><%=cmd_run.get_province("全国").dead %></span>
+					<span style="color: #D9001B;"><%=cmd_run.get_province("全国").cure %></span>
 				</p>
 				
 			</div>

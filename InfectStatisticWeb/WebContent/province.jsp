@@ -83,15 +83,15 @@ margin-top: 850px;
             </div>
           </div>
 
-          <div id="cure">
+          <div id="dead">
             <div class="text2 ">
-              <p><span>新增治愈</span></p>
+              <p><span>新增死亡</span></p>
             </div>
           </div>
 
-          <div id="dead">          
+          <div id="cure">          
             <div class="text2 ">
-              <p><span>新增死亡</span></p>
+              <p><span>新增治愈</span></p>
             </div>
           </div>
 
@@ -102,16 +102,16 @@ margin-top: 850px;
             </div>
           </div>
 
-          <div id="cures">       
+          <div id="deads">       
             <div class="text2 ">
-              <p style="font-size:72px;"><span style="color:#7F7F7F;"><%=cmd_run.getInfoByDate(date).getProvince(province).cure %></span></p>
+              <p style="font-size:72px;"><span style="color:#7F7F7F;"><%=cmd_run.getInfoByDate(date).getProvince(province).dead %></span></p>
                 
             </div>
           </div>
 
-          <div id="deads">          
+          <div id="cures">          
             <div class="text2 ">
-              <p style="font-size:72px;"><span style="color:#D9001B;"><%=cmd_run.getInfoByDate(date).getProvince(province).dead %></span></p>
+              <p style="font-size:72px;"><span style="color:#D9001B;"><%=cmd_run.getInfoByDate(date).getProvince(province).cure %></span></p>
                
             </div>
           </div>

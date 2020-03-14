@@ -106,7 +106,7 @@ body {
   font-size:28px;
 }
 
-#cure {
+#dead {
   border-width:0px;
   position:absolute;
   left:948px;
@@ -117,7 +117,7 @@ body {
   font-size:28px;
 }
 
-#dead {
+#cure {
   border-width:0px;
   position:absolute;
   left:725px;
@@ -139,7 +139,7 @@ body {
   text-align: center;
 }
 
-#cures {
+#deads {
   border-width:0px;
   position:absolute;
   left:901px;
@@ -150,7 +150,7 @@ body {
   text-align: center;
 }
 
-#deads {
+#cures {
   border-width:0px;
   position:absolute;
   left:693px;
