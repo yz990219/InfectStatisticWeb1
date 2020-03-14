@@ -24,7 +24,9 @@
 					}
 				}
 			%>
-			<div><h1 style="color:#ffffff ;">日期选择</h1></div>
+			<div>
+				<h1 style="color: #ffffff;">日期选择</h1>
+			</div>
 			<div>
 				<select name="date">
 					<%
