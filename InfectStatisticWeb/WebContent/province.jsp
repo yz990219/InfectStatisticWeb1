@@ -49,7 +49,8 @@ margin-top: 850px;
 </style>
 </head>
 <body>
-<div id = "dataview"><div id="pic">
+	<div id = "dataview">
+		<div id="pic">
           <img id="pic_box"  src="https://static.ws.126.net/163/f2e/news/virus_report/static/images/banner.53e59fc.png"/>
           <div class="text1 " style="display:none; visibility: hidden">
             <p></p>
@@ -185,22 +186,53 @@ margin-top: 850px;
 			series : [ {
 				name : '新增确诊',
 				type : 'line',
-				data : data_ip
-
+				data : data_ip,
+				itemStyle : {  
+                    normal : {  
+                    	color:'#EC808D',
+                        lineStyle:{  
+                            color:'#EC808D'  
+                        }  
+                    }  
+                }
 			}, {
 				name : '新增疑似',
 				type : 'line',
-				data : data_sp
+				data : data_sp,
+				itemStyle : {  
+                    normal : {  
+                    	color:'#66A9C5',
+                        lineStyle:{  
+                            color:'#66A9C5'  
+                        }  
+                    }  
+                }
 
 			}, {
 				name : '新增治愈',
 				type : 'line',
-				data : data_cure
+				data : data_cure,
+				itemStyle : {  
+                    normal : {  
+                    	color:'#D9001B', 
+                        lineStyle:{  
+                            color:'#D9001B'  
+                        }  
+                    }  
+                }
 
 			}, {
 				name : '新增死亡',
 				type : 'line',
-				data : data_dead
+				data : data_dead,
+				itemStyle : {  
+                    normal : { 
+                    	color:'#7F7F7F',
+                        lineStyle:{  
+                            color:'#7F7F7F'  
+                        }  
+                    }  
+                }
 
 			} ]
 		};

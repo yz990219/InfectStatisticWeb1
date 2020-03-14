@@ -18,7 +18,7 @@
 	<div class="datechoose">
 		<form class="form" action="province.jsp" id="province">
 
-			
+
 			<%
 				ArrayList<String> fileNameList = new ArrayList<String>();
 				String[] temp;
@@ -49,7 +49,8 @@
 				</select>
 			</div>
 			<input id="province_value" name="province_value" type="text"
-				value="<%=request.getParameter("province_value")%>" style="display: none;">
+				value="<%=request.getParameter("province_value")%>"
+				style="display: none;">
 			<div style="margin-top: 20px">
 				<button type="submit">确定</button>
 			</div>

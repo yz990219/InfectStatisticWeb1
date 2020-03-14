@@ -153,7 +153,7 @@
 				<p style="font-size: 72px;">
 					<span style="color: #D9001B;"><%=cmd_run.get_province("全国").cure %></span>
 				</p>
-				
+
 			</div>
 		</div>
 
