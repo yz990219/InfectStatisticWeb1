@@ -131,7 +131,7 @@ body {
 #ips {
   border-width:0px;
   position:absolute;
-  left:194px;
+  left:176px;
   top:707px;
   width:228px;
   height:100px;
@@ -142,7 +142,7 @@ body {
 #deads {
   border-width:0px;
   position:absolute;
-  left:901px;
+  left:886px;
   top:707px;
   width:228px;
   height:100px;
@@ -153,7 +153,7 @@ body {
 #cures {
   border-width:0px;
   position:absolute;
-  left:693px;
+  left:668px;
   top:707px;
   width:228px;
   height:100px;
@@ -164,7 +164,7 @@ body {
 #sps {
   border-width:0px;
   position:absolute;
-  left:444px;
+  left:426px;
   top:707px;
   width:228px;
   height:100px;
@@ -192,6 +192,7 @@ body {
   width:450px;
   height:120px;
   display:flex;
+  font-family:sans-serif;
   font-weight:400;
   font-style:normal;
   font-size:90px;
