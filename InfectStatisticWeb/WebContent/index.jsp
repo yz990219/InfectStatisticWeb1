@@ -26,11 +26,25 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE">
 <title>全国疫情地图</title>
+<link href="css/styles.css" type="text/css" rel="stylesheet" />
 <style>
 #china-map {
 	width: 1000px;
 	height: 1000px;
-	margin: auto;
+	margin-top: 840px;
+	margin-left: 100px;
+}
+
+#map {
+	
+}
+
+#province {
+	
+}
+
+#dataview {
+	
 }
 
 #box {
@@ -44,8 +58,13 @@
 	display: block;
 }
 
+#button {
+	position: absolute;
+}
+
 #buttons {
-	margin-left: 260px;
+	margin-left: -126px;
+	margin-top: -970px;
 }
 </style>
 <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -53,28 +72,135 @@
 <script type="text/javascript" src="js/map/china.js"></script>
 </head>
 <body>
+	<div id="dateview">
+		<div id="pic">
+			<img id="pic_box"
+				src="https://static.ws.126.net/163/f2e/news/virus_report/static/images/banner.53e59fc.png" />
+			<div class="text1 " style="display: none; visibility: hidden">
+				<p></p>
+			</div>
+		</div>
+
+		<div id="tit">
+			<div class="text2 ">
+				<p>
+					<span>疫情统计</span>
+				</p>
+			</div>
+		</div>
 
 
+		<div id="background">
+			<div id="background_box"></div>
+			<div class="text1 " style="display: none; visibility: hidden">
+				<p></p>
+			</div>
+		</div>
+
+
+		<div id="sp">
+			<div class="text2 ">
+				<p>
+					<span>累计疑似</span>
+				</p>
+			</div>
+		</div>
+
+		<div id="ip">
+			<div class="text2 ">
+				<p>
+					<span>累计确诊</span>
+				</p>
+			</div>
+		</div>
+
+		<div id="cure">
+			<div class="text2 ">
+				<p>
+					<span>累计治愈</span>
+				</p>
+			</div>
+		</div>
+
+		<div id="dead">
+			<div class="text2 ">
+				<p>
+					<span>累计死亡</span>
+				</p>
+			</div>
+		</div>
+
+		<div id="ips">
+			<div class="text2 ">
+				<p style="font-size: 72px;">
+					<span style="color: #EC808D;"><%=cmd_run.get_province("全国").ip %></span>
+				</p>
+
+			</div>
+		</div>
+
+		<div id="cures">
+			<div class="text2 ">
+				<p style="font-size: 72px;">
+					<span style="color: #7F7F7F;"><%=cmd_run.get_province("全国").cure %></span>
+				</p>
+
+			</div>
+		</div>
+
+		<div id="deads">
+			<div class="text2 ">
+				<p style="font-size: 72px;">
+					<span style="color: #D9001B;"><%=cmd_run.get_province("全国").dead %></span>
+				</p>
+				
+			</div>
+		</div>
+
+		<div id="sps">
+			<div class="text2 ">
+				<p style="font-size: 72px;">
+					<span style="color: #66A9C5;"><%=cmd_run.get_province("全国").sp %></span>
+				</p>
+
+			</div>
+		</div>
+
+		<div id="date">
+			<div class="text2 ">
+				<p>
+					<span>更新至<%=date%></span>
+				</p>
+			</div>
+		</div>
+
+		<div id="data">
+			<div class="text2 ">
+				<p>
+					<span>总数据统计</span>
+				</p>
+			</div>
+		</div>
+	</div>
 	<div id="map">
-		<div style="text-align: center; clear: both;">
-			<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
-			<script src="/follow.js" type="text/javascript"></script>
-		</div>
-		<div id="buttons">
-			<button id="back">返回全国</button>
-			<form action="dateChooseProvince.jsp" style="display: none;" id="province">
-				<span>是否查看</span> <span id="yz" name="yz" style="font-size: 20px;">全国</span>
-				<span>详细数据</span> 
-				<input id="province_value" name="province_value"
-					type="text" value="测试" style="display: none;">
-				<button type="submit">确定</button>
-			</form>
-
-		</div>
-		<h1 style="text-align: center;"><%=date%>疫情</h1>
+		<h1 style="text-align: center;"><%=date%>疫情
+		</h1>
 		<div id="china-map"></div>
 	</div>
+	<div id="buttons">
+		<button id="back">返回全国</button>
+		<h1><%=date%>疫情
+		</h1>
+		<form action="dateChooseProvince.jsp" style="display: none;"
+			id="province">
+			<span>是否查看</span> <span id="yz" name="yz" style="font-size: 20px;">全国</span>
+			<span>详细数据</span> <input id="province_value" name="province_value"
+				type="text" value="测试" style="display: none;">
 
+			<button type="submit">确定</button>
+		</form>
+
+	</div>
 	<script>
 		//地图使用的JavaScript
 		var myChart = echarts.init(document.getElementById('china-map'));
@@ -269,7 +395,7 @@
 						label : '确诊1-99人',
 					//color: '#f5bba7'
 					}, ],
-					
+
 					color : [ '#974236', '#f5bba7' ]
 				},
 				series : [ {

@@ -22,18 +22,122 @@
 	CommandLine commandline = commandline_analysis.analysis(commandline_test);
 	//测试用
 	CommandLineRun cmd_run = new CommandLineRun(commandline);
+	/*width: 1000px;
+height: 400px;
+margin-left: 145px;
+user-select: none;
+position: relative;
+margin-top: 850px;*/
 %>
 <html>
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE">
-<title><%=province%>省详细信息</title>
+<title><%=date%><%=province%>省详细信息</title>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/echarts.min.js"></script>
+<link href="css/styles.css" type="text/css" rel="stylesheet"/>
+<style>
+#main{
+width: 1000px;
+height: 400px;
+margin-left: 145px;
+user-select: none;
+position: relative;
+margin-top: 850px;
+}
+</style>
 </head>
 <body>
-	<h1>你的选择是<%=province%>日期是：<%=date%></h1>
-	<div id="main" style="width: 1000px; height: 400px; margin-left: 500px;"></div>
+<div id = "dataview"><div id="pic">
+          <img id="pic_box"  src="https://static.ws.126.net/163/f2e/news/virus_report/static/images/banner.53e59fc.png"/>
+          <div class="text1 " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+       
+        <div id="tit"  >
+          <div class="text2 ">
+            <p><span>疫情统计</span></p>
+          </div>
+        </div>
+           
+       
+        <div id="background">
+          <div id="background_box"></div>
+          <div class="text1 " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+  
+
+          <div id="sp">            
+            <div class="text2 ">
+              <p><span>新增疑似</span></p>
+            </div>
+          </div>
+
+          <div id="ip">           
+            <div class="text2 ">
+              <p><span>新增确诊</span></p>
+            </div>
+          </div>
+
+          <div id="cure">
+            <div class="text2 ">
+              <p><span>新增治愈</span></p>
+            </div>
+          </div>
+
+          <div id="dead">          
+            <div class="text2 ">
+              <p><span>新增死亡</span></p>
+            </div>
+          </div>
+
+          <div id="ips">      
+            <div class="text2 ">
+              <p style="font-size:72px;"><span style="color:#EC808D;"><%=cmd_run.getInfoByDate(date).getProvince(province).ip %></span></p>
+                
+            </div>
+          </div>
+
+          <div id="cures">       
+            <div class="text2 ">
+              <p style="font-size:72px;"><span style="color:#7F7F7F;"><%=cmd_run.getInfoByDate(date).getProvince(province).cure %></span></p>
+                
+            </div>
+          </div>
+
+          <div id="deads">          
+            <div class="text2 ">
+              <p style="font-size:72px;"><span style="color:#D9001B;"><%=cmd_run.getInfoByDate(date).getProvince(province).dead %></span></p>
+               
+            </div>
+          </div>
+
+          <div id="sps">         
+            <div class="text2 ">
+              <p style="font-size:72px;"><span style="color:#66A9C5;"><%=cmd_run.getInfoByDate(date).getProvince(province).sp %></span></p>
+               
+            </div>
+          </div>
+
+          <div id="date">            
+            <div class="text2 ">
+              <p><span>更新至<%=date%></span></p>
+            </div>
+          </div>
+
+          <div id="data">          
+            <div style="text-align:center;font-size:48px;">
+              <p><span><%=date%><br><%=province%>省数据统计</span></p>
+            </div>
+          </div>
+</div>
+
+	<h1 style="visibility:hidden;">你的选择是<%=province%>日期是：<%=date%></h1>
+	<div id="main" ></div>
 
 
 
